@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	my_string()
+	//my_string()
+	my_string2()
 }
 
 func my_string() {
@@ -33,6 +34,33 @@ func main() {
 	fmt.Println(str2)
 
 	// 字符串拼接
-	var str string = "hello" + "world"
-	fmt.Println(str)
+	var str3 string = "hello" + " world,"
+	str3 += " hello linux"
+	fmt.Println(str3)
+
+	// 当一个拼接的操作很长时，可以分行写, 加号 "+" 必须放在上面
+	var str4 = "hello world" +
+		"hello linux" +
+		"hello golang"
+	fmt.Println(str4)
+}
+
+func my_string2() {
+	/*
+		- 基本数据类型默认值
+		整型		0
+		浮点型		0
+		字符串		""
+		布尔类型	false
+	*/
+	var i int
+	var f1 float32
+	var f2 float64
+	var b bool
+	var s string
+	fmt.Println("int 默认值:", i)
+	fmt.Println("float32 默认值:", f1)
+	fmt.Println("float64 默认值:", f2)
+	fmt.Println("bool 默认值:", b)
+	fmt.Println("string 默认值:", s)
 }
