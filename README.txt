@@ -1,1 +1,1 @@
-study go
+study golang
