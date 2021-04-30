@@ -8,6 +8,7 @@ import (
 func main() {
 	// baseic_to_string_1()
 	// baseic_to_string_2()
+	string_to_basic()
 }
 
 func baseic_to_string_1() {
@@ -79,10 +80,24 @@ func string_to_basic() {
 		注意
 			b, _ = strconv.ParseBool(str)
 			ParseBool 会会返回两个值，上面表示只获取第一个值，第二个值忽略
+		在将 String 类型转成基本数据类型时，要确保 String 类型能够转成有效的数据，比如
+		可以吧 "123" 转成一个整数，但不能把 "hello" 转成一个整数，如果这样做，Golang
+		直接将其转成0
 
 	*/
 	var str1 string = "true"
+	var str2 string = "1234"
+	var str3 string = "9.87"
 	var b bool
-	b, _ = strconv.ParseBool(str)
-	fmt.Printf("b type %T, b value %q\n", b, b)
+	var i int64
+	var i2 int
+	var f float64
+	b, _ = strconv.ParseBool(str1)
+	fmt.Printf("b type %T, b value %v\n", b, b)
+	i, _ = strconv.ParseInt(str2, 10, 64)
+	i2, _ = strconv.Atoi(str2)
+	fmt.Printf("i type %T, i value %v\n", i, i)
+	fmt.Printf("i type %T, i value %v\n", i2, i2)
+	f, _ = strconv.ParseFloat(str3, 64)
+	fmt.Printf("f type %T, f value %v\n", f, f)
 }

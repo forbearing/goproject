@@ -3,11 +3,11 @@ package main
 import "fmt"
 
 func main() {
-	//my_string()
-	my_string2()
+	my_string()
+	// my_string()
 }
 
-func my_string() {
+func my_string_2() {
 	/*
 		1、字符串是一串固定长度的字符连接起来的字符序列。Go 的字符串是由单个字节连接起来的。
 		   Go 语言的字符串的字节使用 UTF-8 编码标识 Unicode 文本
@@ -45,7 +45,7 @@ func main() {
 	fmt.Println(str4)
 }
 
-func my_string2() {
+func my_string() {
 	/*
 		- 基本数据类型默认值
 		整型		0
