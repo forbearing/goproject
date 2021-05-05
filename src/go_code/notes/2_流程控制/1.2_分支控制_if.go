@@ -1,11 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
 	//my_func()
 	// my_func2()
-	my_func3()
+	// my_func3()
+	my_func4()
 }
 
 func my_func() {
@@ -56,6 +60,7 @@ func my_func2() {
 	}
 }
 
+// 多分支
 func my_func3() {
 	var score int
 	fmt.Println("请输入成绩:")
@@ -69,5 +74,45 @@ func my_func3() {
 		fmt.Println("奖励一台 iPad")
 	} else {
 		fmt.Println("什么奖励也没有")
+	}
+
+	var a float64 = 3.0
+	var b float64 = 100.0
+	var c float64 = 6.0
+
+	m := b*b - 4*a*c
+	if m > 0 {
+		x1 := (-b + math.Sqrt(m)) / 2 * a
+		x2 := (-b + math.Sqrt(m)) / 2 * a
+		fmt.Printf("x1=%v x2=%v", x1, x2)
+	} else if m == 0 {
+		x1 := (-b + math.Sqrt(m)) / 2 * a
+		fmt.Printf("x1=%v x2=%v", x1, x1)
+	} else {
+		fmt.Println("无解...")
+	}
+}
+
+// 嵌套分支
+func my_func4() {
+	/*
+		嵌套分支不宜过多，最多我们建议控制在3层。
+	*/
+
+	var second float64
+	fmt.Println("请输入秒数")
+	fmt.Scanln(&second)
+	if second <= 8 {
+		// 进入决赛
+		var gender string
+		fmt.Println("请输入你的性别")
+		fmt.Scanln(&gender)
+		if gender == "男" {
+			fmt.Println("进入决赛男子组")
+		} else {
+			fmt.Println("进入决赛的女子组")
+		}
+	} else {
+		fmt.Println("out ...")
 	}
 }
