@@ -1,0 +1,18 @@
+package main
+
+import (
+	"bufio"
+	"io/ioutil"
+	"os"
+)
+
+func main() {
+	filePath := "/tmp/1.txt"
+	file, err := os.Open(filePath)
+	file, err = os.OpenFile(filePath, os.O_CREATE|os.O_WRONLY, 0644)
+	reader := bufio.NewReader()
+	writer := bufio.NewWriter()
+
+	context, err := ioutil.ReadFile(file1Path)
+	err = ioutil.WriteFile(file2Path, context, 0640)
+}
