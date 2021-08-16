@@ -11,3 +11,14 @@ func main() {
 	输出流：数据从程序（内存）到数据源（文件）的路径
 2. os.File 封装了所有文件相关操作，File 是一个结构体
 */
+
+/*
+os.Open(filePath)
+os.OpenFile(filePath)
+ioutil.ReadFile(filePath)
+ioutil.WriteFile(filePath)
+bufio.NewReader(file)
+bufio.NewWriter(file)
+reader.ReadString('\n')
+writer.WriteString(str)
+*/
